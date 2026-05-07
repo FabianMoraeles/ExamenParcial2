@@ -1,0 +1,10 @@
+Sencillo(m, denominaciones):
+    ordenar denominaciones descendente
+    monedas_usadas = []
+    
+    for d in denominaciones:
+        mientras m >= d:
+            monedas_usadas.agregar(d)
+            m = m - d
+    
+    retornar monedas_usadas
