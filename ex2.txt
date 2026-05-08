@@ -1,0 +1,18 @@
+Knapsack(W, item):
+    for item i:
+        densidad[i] = p[i] / w[i]
+    
+    ordenar items descendente
+    
+    valor_total = 0
+    capacidad_restante = W
+    
+    for item i in ordenados:
+        if capacidad_restante == 0:
+            break
+        
+        tomar = min(w[i], capacidad_restante)
+        valor_total += tomar * densidad[i]
+        capacidad_restante -= tomar
+    
+    return valor_total

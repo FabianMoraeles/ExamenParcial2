@@ -1,0 +1,25 @@
+vecinos = {
+    0: [8],
+    1: [2, 4],
+    2: [1, 3, 5],
+    3: [2, 6],
+    4: [1, 5, 7],
+    5: [2, 4, 6, 8],
+    6: [3, 5, 9],
+    7: [4, 8],
+    8: [0, 5, 7, 9],
+    9: [6, 8]
+}
+
+Nokia(n):
+    if n == 1: 
+        return 10
+    com = {d: 1 para d en 0..9}
+    
+    for i in 2 to n:
+        nuevo_comb = {}
+        para cada d en 0..9:
+            nuevo_comb[d] = suma(comb[v] for v in vecinos[d])
+        comb = nuevo_comb
+    
+    return suma(comb[d] para d en 0 a 9)
